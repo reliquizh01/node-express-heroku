@@ -31,7 +31,7 @@ const db = mysql.createConnection({
 });
 
 app.use('/users', require('./routes/user'));
-app.listen(port, hostname, ()=>{
+app.listen(port, ()=>{
     console.log(`Server Started at : http://${hostname}:${port}`);
 
     db.connect((err)=>{
